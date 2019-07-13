@@ -1,0 +1,17 @@
+{
+    "version": "0.1",
+    "sourcesBaseFolder": "Sources/Bones",
+    "destinationBaseFolder": "",
+    "name": "Bones",
+    "bones": [
+      {
+        "name": "pipe",
+        "description": "Creates a PowerTools pipe",
+        "folderPath": "Sources/DomainModel/Pipe",
+        "createSubfolder": true,
+        "targets" : ["DomainModel"],
+        "files": ["Pipe/BonePipe.swift", 
+            "Pipe/BonePipeFactory.swift"]
+      }
+    ]
+}
