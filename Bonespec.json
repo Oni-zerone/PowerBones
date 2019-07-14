@@ -7,7 +7,7 @@
       {
         "name": "pipe",
         "description": "Creates a PowerTools pipe",
-        "folderPath": "Sources/DomainModel/Pipe",
+        "folderPath": "DomainModel/Pipe",
         "createSubfolder": true,
         "targets" : ["DomainModel"],
         "files": ["Pipe/BonePipe.swift", 

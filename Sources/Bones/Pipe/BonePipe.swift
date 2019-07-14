@@ -6,29 +6,29 @@ public protocol I{{ name|firstUppercase }}SectionVMFactory {
 
 public protocol I{{ name|firstUppercase }}VMFactory {
     
-    func build(_ {{ name }}: {{ name|firstUppercase }}) -> ItemViewModel
+    func build(_ {{ name|lowercase }}: {{ name|firstUppercase }}) -> ItemViewModel
 }
 
 public class {{ name|firstUppercase }}Pipe: PowerTools.Pipe<[SectionViewModel]> {
     
-    var {{ name }}Repository: I{{ name|firstUppercase }}Repository
+    var {{ name|lowercase }}Repository: I{{ name|firstUppercase }}Repository
     var sectionVMFactory: I{{ name|firstUppercase }}SectionVMFactory
-    var {{ name }}VMFactory: I{{ name|firstUppercase }}VMFactory
+    var {{ name|lowercase }}VMFactory: I{{ name|firstUppercase }}VMFactory
     var reference{{ name|firstUppercase }}: {{ name|firstUppercase }}
     
-    init({{ name }}Repository: I{{ name|firstUppercase }}Repository,
+    init({{ name|lowercase }}Repository: I{{ name|firstUppercase }}Repository,
          sectionVMFactory: I{{ name|firstUppercase }}SectionVMFactory,
-         {{ name }}VMFactory: I{{ name|firstUppercase }}VMFactory,
+         {{ name|lowercase }}VMFactory: I{{ name|firstUppercase }}VMFactory,
          reference{{ name|firstUppercase }}: {{ name|firstUppercase }}) {
-        self.{{ name }}Repository = {{ name }}Repository
+        self.{{ name|lowercase }}Repository = {{ name|lowercase }}Repository
         self.sectionVMFactory = sectionVMFactory
-        self.{{ name }}VMFactory = {{ name }}VMFactory
+        self.{{ name|lowercase }}VMFactory = {{ name|lowercase }}VMFactory
         self.reference{{ name|firstUppercase }} = reference{{ name|firstUppercase }}
     }
     
     public override func success(_ content: [SectionViewModel]) {
-        let {{ name }}s = {{ name }}Repository.get{{ name|firstUppercase }}s(in: reference{{ name|firstUppercase }})
-        let viewModels = {{ name }}s.map { {{ name }}VMFactory.build($0) }
+        let {{ name|lowercase }}s = {{ name|lowercase }}Repository.get{{ name|firstUppercase }}s(in: reference{{ name|firstUppercase }})
+        let viewModels = {{ name|lowercase }}s.map { {{ name|lowercase }}VMFactory.build($0) }
         let section = sectionVMFactory.buildSection(header: nil, items: viewModels, footer: nil)
         self.send(content.appending(section))
     }
