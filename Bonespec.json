@@ -10,8 +10,15 @@
         "folderPath": "DomainModel/Pipes",
         "createSubfolder": true,
         "targets" : ["DomainModel"],
-        "files": ["Pipe/BonePipe.swift", 
-            "Pipe/BonePipeFactory.swift"]
+        "pluginData": {
+            "targetNames" : [
+              "DomainModel"
+            ]
+          },
+        "files": [
+            "Pipe/BonePipe.swift", 
+            "Pipe/BonePipeFactory.swift"
+        ]
       }
     ]
 }
