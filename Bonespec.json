@@ -2,7 +2,7 @@
     "version": "0.1",
     "sourcesBaseFolder": "Sources/Bones",
     "destinationBaseFolder": "",
-    "name": "Bones",
+    "name": "PowerBones",
     "bones": [
       {
         "name": "pipe",
