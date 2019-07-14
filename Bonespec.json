@@ -9,10 +9,28 @@
         "description": "Creates a PowerTools pipe",
         "folderPath": "DomainModel/Pipes",
         "createSubfolder": true,
+        "folderName": "{{ name|firstUppercase }}Pipe",
         "targets" : ["DomainModel"],
         "pluginData": {
             "targetNames" : [
               "DomainModel"
+            ]
+          },
+        "files": [
+            "Pipe/BonePipe.swift", 
+            "Pipe/BonePipeFactory.swift"
+        ]
+      },
+      {
+        "name": "collectionCell",
+        "description": "Creates a PowerTools compatible UICollectionViewCell",
+        "folderPath": "DomainModel/Pipes",
+        "createSubfolder": true,
+        "folderName": "{{ name|firstUppercase }}Cell",
+        "targets" : ["Interface"],
+        "pluginData": {
+            "targetNames" : [
+              "Interface"
             ]
           },
         "files": [
